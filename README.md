@@ -1,12 +1,12 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=SSAFY6+ALGO+STUDY&fontSize=50&fontAlignY=40&fontAlign=35)
 
-#### 스터디 목적
+## 스터디 목적
 
 알고리즘 풀이 역량 강화
 
 
 
-#### 스터디 진행 방향
+## 스터디 진행 방향
 
 * 프로그래머스의 '코딩테스트 고득점 Kit' 순서대로 진행!
   <a href="https://programmers.co.kr/learn/challenges">코딩테스트 고득점 Kit 가기</a>
@@ -18,7 +18,7 @@
 
 
 
-#### 스터디 일정
+## 스터디 일정
 
 | 주차 | 날짜     | 내용                            | PT발표자 |
 | ---- | -------- | ------------------------------- | -------- |
@@ -36,7 +36,7 @@
 
 
 
-#### 참여 멤버
+## 참여 멤버
 <a href="https://github.com/kgw012/SSAFY6_ALGO_STUDY/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=kgw012/SSAFY6_ALGO_STUDY" />
 </a>
