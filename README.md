@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=SSAFY6+algo+study&fontSize=50&fontAlignY=40&fontAlign=27)
+![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=SSAFY6+ALGO+STUDY&fontSize=50&fontAlignY=40&fontAlign=27)
 
 #### 스터디 목적
 
@@ -37,4 +37,6 @@
 
 
 #### 참여 멤버
-
+<a href="https://github.com/kgw012/SSAFY6_ALGO_STUDY/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kgw012/SSAFY6_ALGO_STUDY" />
+</a>
