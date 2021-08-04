@@ -8,7 +8,7 @@
 
 ## 스터디 진행 방향
 
-* 프로그래머스의 '코딩테스트 고득점 Kit' 순서대로 진행!
+* 프로그래머스의 '코딩테스트 고득점 Kit' 순서대로 진행!<br/>
   <a href="https://programmers.co.kr/learn/challenges">코딩테스트 고득점 Kit 가기</a>
 
 1. 과제 코드리뷰
