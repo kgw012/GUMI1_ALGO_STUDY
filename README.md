@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=알고리즘 스터디&fontSize=50&fontAlignY=40&fontAlign=27)
+![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=SSAFY6+algo+study&fontSize=50&fontAlignY=40&fontAlign=27)
 
 #### 스터디 목적
 
