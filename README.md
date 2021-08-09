@@ -34,6 +34,6 @@
 <br/>
 
 ## 참여 멤버
-<a href="https://github.com/kgw012/SSAFY6_ALGO_STUDY/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=kgw012/SSAFY6_ALGO_STUDY" />
+<a href="https://github.com/kgw012/GUMI1_ALGO_STUDY/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kgw012/GUMI1_ALGO_STUDY" />
 </a>
