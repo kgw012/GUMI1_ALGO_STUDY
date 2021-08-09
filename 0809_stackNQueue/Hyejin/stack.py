@@ -20,7 +20,6 @@ class Stack:
             self.top -= 1
             return data
         except IndexError as e:
-            print("top ", self.top)
             print(f"언더플로우 발생 : {e}")
 
     def is_full(self):
@@ -30,7 +29,7 @@ class Stack:
             return False
 
     def is_empty(self):
-        if not self.top:
+        if self.top == -1:
             return True
         else:
             return False
