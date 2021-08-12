@@ -48,4 +48,3 @@ if __name__=='__main__':
         my_answer = solution(bridge_length, weight, truck_weights)
 
         print('answer: {}, my_answer: {}'.format(answer, my_answer))
-    
