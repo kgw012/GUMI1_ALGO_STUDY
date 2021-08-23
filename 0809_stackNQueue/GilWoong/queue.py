@@ -7,6 +7,7 @@ class Queue:
         self.front = 0
         self.rear = 0
 
+
     def push(self, item):
         try:
             if self.size >= self.capacity:
@@ -21,6 +22,7 @@ class Queue:
         except Exception as e:
             print(e)
         
+
     def pop(self):
         try:
             if self.size <= 0:

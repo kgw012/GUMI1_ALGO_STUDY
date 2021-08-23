@@ -7,6 +7,7 @@ class Deque:
         self.front = 0
         self.rear = 0
 
+
     def push_front(self, item):
         try:
             if self.size >= self.capacity:
@@ -22,6 +23,7 @@ class Deque:
         except Exception as e:
             print(e)
 
+
     def push_rear(self, item):
         try:
             if self.size >= self.capacity:
@@ -35,7 +37,8 @@ class Deque:
 
         except Exception as e:
             print(e)
-        
+
+
     def pop_front(self):
         try:
             if self.size <= 0:
@@ -53,6 +56,7 @@ class Deque:
         except Exception as e:
             print(e)
 
+
     def pop_rear(self):
         try:
             if self.size <= 0:
@@ -69,6 +73,7 @@ class Deque:
 
         except Exception as e:
             print(e)
+
 
     def __repr__(self):
         repr_list = []
