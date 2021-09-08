@@ -2,17 +2,11 @@
 class Heap:
     heap = []
 
-
-
     def __init__(self):
         self.heap = [0]
 
     def __str__(self):
         return str(self.heap[1])
-
-
-
-
 
     def insert(self, num):
         self.heap.append(num)
@@ -64,10 +58,6 @@ class Heap:
 
     def view(self):
         return self.heap[1:]
-
-
-
-
 
 
 
