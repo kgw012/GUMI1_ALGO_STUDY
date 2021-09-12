@@ -15,24 +15,42 @@ class MinHeap(Heap):
     def __init__(self):
         super().__init__()
 
-    def set_valid(self, up_down):
+    def set_valid(self, heap_pop=True):
         """삽입/삭제 후 heap 재배치, 자식노드가 부모노드보다 커야한다."""
-        i = 0  # 삭제
-        if up_down < 0:
-            i = self.size  # 삽입
+        if not heap_pop:  # 삽입
+            i = self.size
+            while 1 <= i <= self.size:
+                child = self.heap[i]
+                if child >= self.heap[i // 2]:
+                    return
+                else:
+                    self.heap[i], self.heap[i // 2] = self.heap[i // 2], child
+                    i //= 2
+        else:  # 삭제
+            i = 1
+            while True:
+                min_data, idx = self.heap[i], i  # 좌/우 노드 중 더 작은 값과 교체예정
+                swap = False
+                if 1 <= i * 2 <= self.size and self.heap[i * 2] < self.heap[idx]:
+                    min_data, idx = self.heap[i * 2], i * 2
+                    swap = True
 
-        while 1 <= i <= self.size:
-            child = self.heap[i]
-            if child >= self.heap[i // 2]:
-                return
-            else:
-                self.heap[i], self.heap[i // 2] = self.heap[i // 2], child
-            i += up_down
+                if 1 <= i * 2 + 1 <= self.size and self.heap[i * 2 + 1] < self.heap[idx]:
+                    min_data, idx = self.heap[i * 2 + 1], i * 2 + 1
+                    swap = True
+
+                if not swap:
+                    # 자식노드보다 부모노드가 작거나 같다면
+                    return
+
+                self.heap[i], self.heap[idx] = self.heap[idx], self.heap[i]
+                i = idx
 
     def push(self, data):
         self.heap.append(data)
         self.size += 1
-        self.set_valid(-1)
+        self.set_valid(False)
+        self.monitor(data)
 
     def pop(self) -> int:
         try:
@@ -44,14 +62,14 @@ class MinHeap(Heap):
             ret = self.heap[1]
             self.heap[1] = self.heap.pop()
             self.size -= 1
-            self.set_valid(1)
+            self.set_valid()
             return ret
         except Exception as e:
             print(f"에러발생 : {e}")
             return
 
-    def monitor(self):
-        pass
+    def monitor(self, data):
+        print(data, self.heap)
 
 
 if __name__ == "__main__":
@@ -61,7 +79,6 @@ if __name__ == "__main__":
     print("------------- push -------------")
     for data in test_data:
         min_heap.push(data)
-    min_heap.monitor()
 
     print("------------- pop -------------")
     sorted_data = []
