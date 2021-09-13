@@ -1,31 +1,35 @@
-def merge_sort(arr):
-    if len(arr) == 1:
-        return arr
+def merge_sort(arr, st, end):
+    if end - st < 2:
+        return
 
     # divide
-    mid = len(arr) // 2
-    left_arr = merge_sort(arr[:mid])
-    right_arr = merge_sort(arr[mid:])
+    mid = (st + end) // 2
+    merge_sort(arr, st, mid)
+    merge_sort(arr, mid, end)
 
     # conquer
     ret = []
-    i, j = 0, 0
-    while i < len(left_arr) and j < len(right_arr):
-        if left_arr[i] < right_arr[j]:
-            ret.append(left_arr[i])
+    i, j = st, mid
+    while i < mid and j < end:
+        if arr[i] <= arr[j]:
+            ret.append(arr[i])
             i += 1
         else:
-            ret.append(right_arr[j])
+            ret.append(arr[j])
             j += 1
 
-    if i < len(left_arr):
-        ret += left_arr[i:]
-    else:
-        ret += right_arr[j:]
-    return ret
+    while i < mid:
+        ret.append(arr[i])
+        i += 1
+    while j < end:
+        ret.append(arr[j])
+        j += 1
+
+    for x in range(st, end):
+        arr[x] = ret[x - st]
 
 
 if __name__ == "__main__":
     test_arr = [3, 5, 8, 0, 100, 35, 2, 17, 5]
-    sorted_arr = merge_sort(test_arr)
-    print(sorted_arr)
+    merge_sort(test_arr, 0, len(test_arr))
+    print(test_arr)
