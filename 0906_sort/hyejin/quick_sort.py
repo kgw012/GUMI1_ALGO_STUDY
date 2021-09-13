@@ -14,9 +14,9 @@ def quick_sort(arr, start, end):
     arr[start], arr[r] = arr[r], pivot
     print(" >> ", arr[start:end])
 
-    if start < r:
+    if start + 1 < r:
         quick_sort(arr, start, r)
-    if r + 1 < end:
+    if r + 2 < end:
         quick_sort(arr, r + 1, end)
 
 
