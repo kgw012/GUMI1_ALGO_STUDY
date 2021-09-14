@@ -3,7 +3,6 @@
 import heapq
 
 def solution(operations):
-
     min_heap = []
     max_heap = []
 

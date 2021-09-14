@@ -13,7 +13,8 @@ def quick_sort(lst, st, fn):
             l += 1
         lst[l], lst[r] = lst[r], lst[l]
 
-    lst[pivot], lst[r] = lst[r], lst[pivot]
+    if lst[pivot] > lst[r]:
+        lst[pivot], lst[r] = lst[r], lst[pivot]
 
     quick_sort(lst, st, r)
     quick_sort(lst, r, fn)
