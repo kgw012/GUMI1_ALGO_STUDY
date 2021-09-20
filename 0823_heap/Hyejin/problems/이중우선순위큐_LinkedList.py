@@ -58,10 +58,12 @@ class LinkedList:
         if flag == "min":
             ret = self.head.data
             self.head = self.head.next
+            self.head.prev = None
             return ret
         elif flag == "max":
             ret = self.tail.data
             self.tail = self.tail.prev
+            self.tail.next = None
             return ret
 
     def show(self):
