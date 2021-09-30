@@ -1,3 +1,6 @@
+# 프로그래머스 '가장 큰 수'
+# https://programmers.co.kr/learn/courses/30/lessons/42746
+
 def solution(numbers):
     def key(number):
         value = str(number)
