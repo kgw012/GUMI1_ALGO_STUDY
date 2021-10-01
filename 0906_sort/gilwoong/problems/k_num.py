@@ -12,10 +12,10 @@ def solution(array, commands):
         heap = []
 
         for idx in range(i - 1, j):
-            heapq.heappush(array[idx], array[idx])
+            heapq.heappush(heap, array[idx])
         
         while True:
-            num = heapq.heappop(array)
+            num = heapq.heappop(heap)
             k -= 1
 
             if k == 0:
