@@ -8,21 +8,26 @@ def merge_sort(arr, st, end):
     merge_sort(arr, mid, end)
 
     # conquer
-    ret = []
+    ret = [0] * (end - st + 1)
+    t = 0
     i, j = st, mid
     while i < mid and j < end:
         if arr[i] <= arr[j]:
-            ret.append(arr[i])
+            ret[t] = arr[i]
+            t += 1
             i += 1
         else:
-            ret.append(arr[j])
+            ret[t] = arr[j]
+            t += 1
             j += 1
 
     while i < mid:
-        ret.append(arr[i])
+        ret[t] = arr[i]
+        t += 1
         i += 1
     while j < end:
-        ret.append(arr[j])
+        ret[t] = arr[j]
+        t += 1
         j += 1
 
     for x in range(st, end):
