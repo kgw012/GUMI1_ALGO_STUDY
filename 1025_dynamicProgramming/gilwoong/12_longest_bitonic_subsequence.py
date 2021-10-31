@@ -21,7 +21,7 @@ if __name__ == '__main__':
                 max_cnt2 = max(max_cnt2, dp2[N - j - 1])
         
         dp1[i] = max_cnt1 + 1
-        dp2[N - i  -1] = max_cnt2 + 1
+        dp2[N - i - 1] = max_cnt2 + 1
     
     answer = 0
     for i in range(N):
