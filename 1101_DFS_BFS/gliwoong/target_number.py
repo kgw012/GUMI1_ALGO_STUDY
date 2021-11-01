@@ -1,5 +1,5 @@
 # 프로그래머스 '타겟 넘버'
-# https://programmers.co.kr/learn/courses/30/lessons/43165?language=python3
+# https://programmers.co.kr/learn/courses/30/lessons/43165
 
 def dfs(numbers, target, total, idx):
     if idx >= len(numbers):

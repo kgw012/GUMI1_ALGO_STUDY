@@ -1,5 +1,5 @@
 # 프로그래머스 '네트워크'
-# https://programmers.co.kr/learn/courses/30/lessons/43162?language=python3
+# https://programmers.co.kr/learn/courses/30/lessons/43162
 
 def find(p_list, a):
     if p_list[a] == a:
