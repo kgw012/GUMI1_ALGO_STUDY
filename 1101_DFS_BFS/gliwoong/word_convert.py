@@ -20,6 +20,8 @@ def solution(begin, target, words):
         for i, n_word in enumerate(words):
             cnt = 0
             for j in range(n):
+                if cnt > 1:
+                    break
                 if word[j] != n_word[j]:
                     cnt += 1
             
