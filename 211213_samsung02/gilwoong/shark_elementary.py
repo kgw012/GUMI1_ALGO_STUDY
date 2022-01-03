@@ -40,17 +40,19 @@ for lst in input_list:
                 if not (0 <= ni < N and 0 <= nj < N):
                     continue
                 
+                # condition 2
                 if MAP[ni][nj] == 0:
                     empty_cnt += 1
                     continue
-
+                
+                # condition 1
                 if MAP[ni][nj] in fav_lst:
                     fav_cnt += 1
                 
             
-            res[0] = -fav_cnt
-            res[1] = -empty_cnt
-            res[2], res[3] = i, j
+            res[0] = -fav_cnt       # condition 1
+            res[1] = -empty_cnt     # condition 2
+            res[2], res[3] = i, j   # condition 3
             res_lst.append(res)
     
     res_lst.sort()

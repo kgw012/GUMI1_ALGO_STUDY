@@ -6,7 +6,7 @@ curves = []
 for _ in range(N):
     curves.append(list(map(int, input().split())))
 
-MAP = [[[False] * 4 for _ in range(101)] for _ in range(101)]
+MAP = [[False for _ in range(101)] for _ in range(101)]
 
 di = [0, -1, 0, 1]
 dj = [1, 0, -1, 0]
@@ -22,10 +22,10 @@ for curve in curves:
             d_list.append((d_list[idx] + 1) % 4)
 
     for d in d_list:
-        MAP[i][j][d] = True
+        MAP[i][j] = True
         ni = i + di[d]
         nj = j + dj[d]
-        MAP[ni][nj][(d + 2) % 4] = True
+        MAP[ni][nj] = True
 
         i, j = ni, nj
 
@@ -33,7 +33,7 @@ cnt = 0
 
 for i in range(100):
     for j in range(100):
-        if (True in MAP[i][j]) and (True in MAP[i + 1][j]) and (True in MAP[i][j + 1]) and (True in MAP[i + 1][j + 1]):
+        if MAP[i][j] and MAP[i + 1][j] and MAP[i][j + 1] and MAP[i + 1][j + 1]:
             cnt += 1
 
 print(cnt)
