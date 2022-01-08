@@ -21,7 +21,6 @@ def dfs(N, M, MAP, virus_list, empty_cnt, select_list, cnt, idx):
             visits[i][j] = True
         
         level = 0
-        save = 1
         cnt = 0
         while que:
             i, j, level = que.popleft()
